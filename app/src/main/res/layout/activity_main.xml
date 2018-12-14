@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/baseball2" />
+
+    <TextView
+        android:id="@+id/innings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/cherry_cream_soda"
+        android:text="Innings"
+        android:textColor="#cd3700"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/inningsScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="casual"
+        android:text="1"
+        android:textColor="#cd3700"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/innings"
+        app:layout_constraintStart_toStartOf="@+id/innings"
+        app:layout_constraintTop_toBottomOf="@+id/innings" />
+
+    <Button
+        android:id="@+id/addOneInningsScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/cherry_cream_soda"
+        android:onClick="addOneInningsScore"
+        android:text="+"
+        android:textColor="#cd3700"
+        app:layout_constraintEnd_toEndOf="@+id/inningsScore"
+        app:layout_constraintStart_toStartOf="@+id/inningsScore"
+        app:layout_constraintTop_toBottomOf="@+id/inningsScore" />
+
+    <Button
+        android:id="@+id/reset1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/cherry_cream_soda"
+        android:onClick="resetScore1"
+        android:text="Reset"
+        android:textAllCaps="true"
+        android:textColor="#cd3700"
+        app:layout_constraintEnd_toEndOf="@+id/addOneInningsScore"
+        app:layout_constraintStart_toStartOf="@+id/addOneInningsScore"
+        app:layout_constraintTop_toBottomOf="@+id/addOneInningsScore" />
+
+    <TextView
+        android:id="@+id/home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/cherry_cream_soda"
+        android:text="Home"
+        android:textColor="#cd3700"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/innings"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/homeScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="casual"
+        android:text="0"
+        android:textColor="#cd3700"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/home"
+        app:layout_constraintStart_toStartOf="@+id/home"
+        app:layout_constraintTop_toBottomOf="@+id/home" />
+
+    <Button
+        android:id="@+id/addOneHomeScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/cherry_cream_soda"
+        android:onClick="addOneHomeScore"
+        android:text="+"
+        android:textColor="#cd3700"
+        app:layout_constraintEnd_toEndOf="@+id/homeScore"
+        app:layout_constraintStart_toStartOf="@+id/homeScore"
+        app:layout_constraintTop_toBottomOf="@+id/homeScore" />
+
+    <TextView
+        android:id="@+id/visitor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/cherry_cream_soda"
+        android:text="Visitor"
+        android:textColor="#cd3700"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/innings"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/visitorScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="casual"
+        android:text="0"
+        android:textColor="#cd3700"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/visitor"
+        app:layout_constraintStart_toStartOf="@+id/visitor"
+        app:layout_constraintTop_toBottomOf="@+id/visitor" />
+
+    <Button
+        android:id="@+id/addOneVisitorScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/cherry_cream_soda"
+        android:onClick="addOneVisitorScore"
+        android:text="+"
+        android:textColor="#cd3700"
+        app:layout_constraintEnd_toEndOf="@+id/visitorScore"
+        app:layout_constraintStart_toStartOf="@+id/visitorScore"
+        app:layout_constraintTop_toBottomOf="@+id/visitorScore" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="#cd3700"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reset1" />
+
+    <Button
+        android:id="@+id/addOneBallsScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/cherry_cream_soda"
+        android:onClick="addOneBallsScore"
+        android:text="Balls"
+        android:textAllCaps="true"
+        android:textColor="#cd3700"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/addOneStrikesScore"
+        app:layout_constraintStart_toStartOf="@+id/addOneStrikesScore"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+    <Button
+        android:id="@+id/addOneOutsScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/cherry_cream_soda"
+        android:onClick="addOneOutsScore"
+        android:text="Outs"
+        android:textAllCaps="true"
+        android:textColor="#cd3700"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/addOneStrikesScore"
+        app:layout_constraintStart_toStartOf="@+id/addOneStrikesScore"
+        app:layout_constraintTop_toBottomOf="@+id/addOneStrikesScore" />
+
+    <Button
+        android:id="@+id/addOneStrikesScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/cherry_cream_soda"
+        android:onClick="addOneStrikesScore"
+        android:text="Strikes"
+        android:textAllCaps="true"
+        android:textColor="#cd3700"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addOneBallsScore" />
+
+    <TextView
+        android:id="@+id/ballsScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:text="0"
+        android:textColor="#cd3700"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/addOneBallsScore"
+        app:layout_constraintEnd_toEndOf="@+id/strikesScore"
+        app:layout_constraintStart_toStartOf="@+id/strikesScore" />
+
+    <TextView
+        android:id="@+id/strikesScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="casual"
+        android:text="0"
+        android:textColor="#cd3700"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/addOneStrikesScore"
+        app:layout_constraintEnd_toStartOf="@+id/reset2"
+        app:layout_constraintStart_toEndOf="@+id/addOneStrikesScore" />
+
+    <TextView
+        android:id="@+id/outsScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:text="0"
+        android:textColor="#cd3700"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/addOneOutsScore"
+        app:layout_constraintEnd_toEndOf="@+id/strikesScore"
+        app:layout_constraintStart_toStartOf="@+id/strikesScore" />
+
+    <Button
+        android:id="@+id/reset2"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/cherry_cream_soda"
+        android:onClick="resetScore2"
+        android:text="Reset"
+        android:textColor="#cd3700"
+        app:layout_constraintBottom_toBottomOf="@+id/addOneOutsScore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/addOneBallsScore"
+        app:layout_constraintVertical_bias="1.0" />
+
+</android.support.constraint.ConstraintLayout>
